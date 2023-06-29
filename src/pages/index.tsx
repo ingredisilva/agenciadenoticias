@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import PageCard from '@/components/globals/PageCard';
+import CustomSections from '@/components/globals/CustomSections';
+import Search from '@/components/Home/Search';
 
 /**
  * SVGR Support
@@ -16,7 +17,8 @@ export default function HomePage() {
       {/* <CSP /> */}
       {/* <Seo templateTitle='Home' /> */}
       {/* <Seo /> */}
-      <PageCard />
+      <Search />
+      <CustomSections />
     </>
   );
 }
