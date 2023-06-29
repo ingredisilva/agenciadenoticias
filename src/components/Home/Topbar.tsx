@@ -49,7 +49,7 @@ interface MobileMenuProps {
 function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <div
-      className={`fixed inset-0 z-10 transform bg-primary-yellow ${
+      className={`bg-primary-yellow fixed inset-0 z-10 transform ${
         isOpen ? '' : '-translate-x-full'
       } transition-all duration-300`}
     >
