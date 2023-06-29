@@ -1,8 +1,7 @@
 import * as React from 'react';
 
 import PageCard from '@/components/globals/PageCard';
-import Nav from '@/components/Home/Nav';
-import Seo from '@/components/Seo';
+
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -16,8 +15,7 @@ export default function HomePage() {
       {' '}
       {/* <CSP /> */}
       {/* <Seo templateTitle='Home' /> */}
-      <Seo />
-      <Nav />
+      {/* <Seo /> */}
       <PageCard />
     </>
   );

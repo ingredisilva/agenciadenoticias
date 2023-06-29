@@ -1,33 +1,63 @@
+import { ReactNode } from 'react';
+import { AiOutlinePlayCircle, AiOutlineSound } from 'react-icons/ai';
+import { BsChatSquareHeart, BsFillHouseAddFill } from 'react-icons/Bs';
+import { GiMegaphone } from 'react-icons/gi';
+import { IoMdCamera } from 'react-icons/Io';
+import { RxFileText } from 'react-icons/rx';
 export type SubmenuLink = {
   label: string;
   href: string;
 };
 
 type HeaderLink = {
+  id: string;
   label: string;
-  legenda: string;
+  icon: string | ReactNode;
   href: string;
-  submenu: SubmenuLink[];
 };
 
 export const headerLinks: HeaderLink[] = [
   {
-    label: 'Portal da Prefeitura',
-    legenda: 'Página inicial',
+    id: 'inicio',
+    label: 'Inicio',
+    icon: <BsFillHouseAddFill />,
     href: '/',
-    submenu: [],
   },
   {
-    label: 'A Agefis',
-    legenda: 'Conheça mais',
-    href: 'sobre',
-    submenu: [],
+    id: 'banco_de_imagens',
+    label: 'Banco de Imagens',
+    href: '/bancodeimagens',
+    icon: <IoMdCamera />,
+  },
+  {
+    id: 'videos',
+    label: 'Vídeos',
+    href: '/videos',
+    icon: <AiOutlinePlayCircle />,
+  },
+  {
+    id: 'audios',
+    label: 'Audios',
+    href: '/audios',
+    icon: <AiOutlineSound />,
   },
 
   {
-    label: 'Nossa Revista',
-    legenda: 'Conheça mais',
-    href: 'revista',
-    submenu: [],
+    id: 'campanhas',
+    label: 'Campanhas',
+    href: '/campanhas',
+    icon: <GiMegaphone />,
+  },
+  {
+    id: 'midias_sociais',
+    label: 'Mídias Sociais',
+    href: '/midiassociais',
+    icon: <BsChatSquareHeart />,
+  },
+  {
+    id: 'artigos',
+    label: 'Artigos',
+    href: '/artigos',
+    icon: <RxFileText />,
   },
 ];
