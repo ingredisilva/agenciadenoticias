@@ -1,122 +1,103 @@
-# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+# ⚡️ Next.js 13
 
-<div align="center">
-  <h2>🔋 ts-nextjs-tailwind-starter</h2>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
+# ⚛️ React 18
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
-[![Depfu](https://badges.depfu.com/badges/fc6e730632ab9dacaf7df478a08684a7/overview.svg)](https://depfu.com/github/theodorusclarence/ts-nextjs-tailwind-starter?project_id=30160)
-[![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
+# ✨ TypeScript
 
-</div>
+# 💨 Tailwind CSS 3
 
-## Features
+# 🃏 Jest — Configurado para testes unitários
 
-This repository is 🔋 battery packed with:
+# 📈 Absolute Import and Path Alias — Importe componentes com prefixo @/
 
-- ⚡️ Next.js 13
-- ⚛️ React 18
-- ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
-- 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
-- 🃏 Jest — Configured for unit testing
-- 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
-- 💖 Prettier — Format your code consistently
-- 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
-- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
-- 👷 Github Actions — Lint your code on PR
-- 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
-- 🔥 Snippets — A collection of useful snippets
-- 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
-- 🗺 Site Map — Automatically generate sitemap.xml
-- 📦 Expansion Pack — Easily install common libraries, additional components, and configs
+# 📏 ESLint
 
-See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
+# 💖 Prettier
 
-You can also check all of the **details and demos** on my blog post:
+# 🐶 Husky & Lint Staged — Roda scripts nos arquivos antes de serem enviados
 
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
+# 👷 Github Actions
 
-## Getting Started
+# 🗺 Site Map — Gera automaticamente o sitemap.xml
 
-### 1. Clone this template using one of the three ways:
+# React Slick para sliders e carrosseis
 
-1. Use this repository as template
+# Yup para validação de formulários
 
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
+Gerenciamento de estado da aplicação: Context API, discutir a utilização do Redux caso necessário.
 
-   I'll appreciate if you do, so this template can be known by others too 😄
+## Git Clone
 
-   ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
+### Instalar dependências:
 
-2. Using `create-next-app`
+yarn install (Não misture com outros gerenciadores de pacotes)
 
-   ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
-   ```
+### Rodar servidor de desenvolvimento:
 
-3. Using `degit`
-
-   ```bash
-   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
-   ```
-
-4. Deploy to Vercel
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
-
-### 2. Install dependencies
-
-It is encouraged to use **yarn** so the husky hooks can work properly.
-
-```bash
-yarn install
-```
-
-### 3. Run the development server
-
-You can start the server using this command:
-
-```bash
 yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
+### Testar o build e encontrar warnings:
 
-### 4. Change defaults
+yarn build
 
-There are some things you need to change including title, urls, favicons, etc.
+### Ao instalar uma nova dependência, adicione também o pacote de types para a mesma:
 
-Find all comments with !STARTERCONF, then follow the guide.
+Exemplo: yarn add @types/react
 
-Don't forget to change the package name in package.json
+### Abra em: http://localhost:3000/
 
-### 5. Commit Message Convention
+### Commits: Usar commits semânticos conforme o padrão definido pelo link https://www.conventionalcommits.org/en/v1.0.0/
 
-This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
+Exemplos:
 
-## Projects using ts-nextjs-tailwind-starter
+- chore: add Oyster build script // Pequenas alterações que não são novas funcionalidades.
+- docs: explain hat wobble // Semelhante a uma wiki; documentações etc.
+- feat: add beta sequence // Criação de nova funcionalidade;
+- fix: remove error message // Correção de bugs
+- refactor: share logic 4d3d3d3 // Refatoração de um código
+- style: convert tabs to spaces // Alteração em estilos, formatação de código etc.
+- test: ensure that increment // Criação de testes da sua aplicação
 
-<!--
-TEMPLATE
-- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
-- [sitename](https://sitelink.com)
--->
+### Abrir pull request (PR) e solicitar revisão de código.
 
-- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
-- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
+Sempre teste a funcionalidade antes de abrir um PR.
 
-Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
+O projeto possui regras de estilo e formatação com Prettier e Eslint.
 
-## Expansion Pack 📦
+Resolva os warnings antes de subir (Husky e lint vão impedir).
 
-This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
+Sempre separe a lógica do componente da renderização.
+Conventional Commits
+Conventional Commits
+A specification for adding human and machine readable meaning to commit messages
 
-You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
+## Organização de pastas do projeto:
 
-https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
+- /components: pasta que contém todos os componentes reutilizáveis do projeto;
+- /pages: pasta que contém todas as páginas do projeto, cada pasta representa uma rota;
+- /public: pasta que contém os arquivos públicos como imagens, ícones etc.;
+- /styles: pasta que contém os arquivos de estilos globais e configurações do Tailwind CSS;
+- /types: pasta que contém todos os tipos/interfaces utilizados no projeto;
+- /utils: pasta que contém todas as funções utilitárias do projeto;
+- .eslintrc: arquivo de configuração do ESLint;
+- .gitignore: arquivo que especifica os arquivos/pastas a serem ignorados pelo Git;
+- jest.config.js: arquivo de configuração do Jest;
+- next.config.js: arquivo de configuração do Next.js;
+- package.json: arquivo que contém as informações do projeto e as dependências;
+- README.md: arquivo que contém as informações sobre o projeto;
+- tsconfig.json: arquivo de configuração do TypeScript;
+- yarn.lock: arquivo que contém as versões exatas das dependências instaladas pelo Yarn;
+  -/constant/env.ts: Variáveis de ambiente;
+  -/lib/tests: testes do Open Graph;
+  -/pages/api: concentra todas as chamadas da api;
 
-Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
+## Componentes:
+
+## <Image src='' /> para imagens
+
+## SVG's podem ser importados e usados diretamente como componente
+
+ex: <Logomarca />;
+
+ATENÇÃO
+-Para criar uma nova rota basta criar uma pasta com um arquivo index.tsx e importar o componente <Page />
