@@ -4,12 +4,8 @@ import { BsChatSquareHeart, BsFillHouseAddFill } from 'react-icons/Bs';
 import { GiMegaphone } from 'react-icons/gi';
 import { IoMdCamera } from 'react-icons/Io';
 import { RxFileText } from 'react-icons/rx';
-export type SubmenuLink = {
-  label: string;
-  href: string;
-};
 
-type HeaderLink = {
+export type HeaderLink = {
   id: string;
   label: string;
   icon: string | ReactNode;

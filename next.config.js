@@ -7,18 +7,15 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
+  images: {
+    domains: ['source.unsplash.com', 'res.cloudinary.com'],
+  },
 
   // SVGR
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
+      issuer: /\.[jt]tsx?$/,
       use: [
         {
           loader: '@svgr/webpack',

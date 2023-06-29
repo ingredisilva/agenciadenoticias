@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
+import CustomSections from '@/components/globals/CustomSections';
+
 function PageCard() {
   const router = useRouter();
 
@@ -17,8 +19,10 @@ function PageCard() {
         },
       }}
     >
-      <div className='layout w-full  sm:w-full md:min-w-[300px]'>
-        <div className='flex flex-col'>{/* <h3>PageName!</h3> */}teste</div>
+      <div className='layout w-screen '>
+        <div className='flex flex-col'>
+          <CustomSections />
+        </div>
       </div>
     </motion.div>
   );

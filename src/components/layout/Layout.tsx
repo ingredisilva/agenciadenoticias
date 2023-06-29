@@ -9,8 +9,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <Topbar />
       <Header />
-      <div className='layout xs:flex-wrap flex h-screen gap-8 md:flex-nowrap'>
-        <div className='xs:w-full mt-8 w-2/3'>{children}</div>
+      <div className='layout'>
+        <div className=''>{children}</div>
       </div>
 
       <Footer />
