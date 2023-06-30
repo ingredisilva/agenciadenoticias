@@ -4,6 +4,7 @@ import { PiClock } from 'react-icons/pi';
 import { TbNews } from 'react-icons/tb';
 
 import NewsCard from '@/components/globals/NewsCard';
+import WeeklyNews from '@/components/WeeklyNews';
 
 import { newsList } from '@/services/data';
 
@@ -47,13 +48,17 @@ export function CustomSections() {
                 </span>
               </div>
               <div className='flex'>
-                {item.id === 'noticias' && <Noticias layout='horizontal' />}
-                <hr />
-                {item.id === 'assuntos-da-semana' && (
-                  <Noticias layout='horizontal' />
+                {item.id === 'noticias' && (
+                  <Noticias layout='horizontal' itemCount={6} />
                 )}
                 <hr />
-                {item.id === 'mais-acessadas' && <Noticias layout='vertical' />}
+                {item.id === 'assuntos-da-semana' && (
+                  <WeeklyNews itemCount={2} />
+                )}
+                <hr />
+                {item.id === 'mais-acessadas' && (
+                  <Noticias layout='vertical' itemCount={4} />
+                )}
               </div>
             </>
           );
@@ -63,23 +68,37 @@ export function CustomSections() {
   );
 }
 
-const Noticias = ({ layout }: { layout: 'horizontal' | 'vertical' }) => {
+export const Noticias = ({
+  layout,
+  itemCount,
+  showImage = true,
+  showOnlyLeft = false,
+  showOnlyTitle = false,
+  className = '',
+}: {
+  layout: 'horizontal' | 'vertical' | 'none';
+  itemCount: number;
+  showImage?: boolean;
+  showOnlyLeft?: boolean;
+  showOnlyTitle?: boolean;
+  className?: string;
+}) => {
   return (
     <div
-      className={` ${
+      className={`${
         layout === 'vertical'
           ? 'flex items-start justify-center gap-10'
           : 'flex flex-wrap items-center justify-between'
-      }`}
+      } ${className}`}
     >
-      {newsList.slice(0, layout === 'vertical' ? 4 : 6).map((noticia, id) => {
+      {newsList.slice(0, itemCount).map((noticia, id) => {
         return (
           <div
             key={id}
-            className={`${
+            className={` ${
               layout === 'vertical'
                 ? ''
-                : 'mb-4 w-full items-center md:w-1/2 lg:w-1/2 xl:w-1/2 '
+                : 'mb-4 w-full items-center md:w-1/2 lg:w-1/2 xl:w-1/2'
             }`}
           >
             <NewsCard
@@ -92,7 +111,11 @@ const Noticias = ({ layout }: { layout: 'horizontal' | 'vertical' }) => {
                 categoryId: noticia.categoryId,
               }}
               layout={layout}
+              showImage={showImage}
+              showOnlyLeft={showOnlyLeft}
+              showOnlyTitle={showOnlyTitle}
             />
+            <hr className='flex w-3/4 items-center justify-center bg-gray-700' />
           </div>
         );
       })}

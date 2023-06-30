@@ -9,7 +9,7 @@ import LogoPrefeitura from '/public/images/prefeitura-pb.png';
 function Footer() {
   return (
     <footer className='shadow-top bg-primary-orange absolute w-full overflow-hidden text-gray-800 shadow-lg lg:block'>
-      <div className='layout xs:p-2 relative flex flex-wrap gap-6 sm:justify-center md:justify-between md:pt-10'>
+      <div className='layout xs:p-2 relative flex flex-wrap gap-10   md:pt-10'>
         <div className='xs:justify-center flex flex-col gap-2'>
           <h3 className='text-lg'>ENDEREÇO E CONTATOS</h3>
           <p className='font-semibold'>
