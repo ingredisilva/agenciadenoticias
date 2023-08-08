@@ -17,7 +17,7 @@ const socialLinks = [
 function SocialMediaHeader() {
   return (
     <div className='border-b'>
-      <div className='layout my-2 flex justify-between '>
+      <div className='layout my-2 flex flex-wrap items-center justify-between gap-4'>
         <nav>
           <ul className='flex gap-4 text-xs uppercase '>
             {navLinks.map(({ href, label }) => (

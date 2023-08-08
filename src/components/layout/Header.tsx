@@ -41,6 +41,7 @@ function HeaderLink({
     'flex',
     'justify-center',
     'items-center',
+    'flex-wrap',
     'gap-4',
     'text-sm',
     'font-large',
@@ -71,7 +72,7 @@ function HeaderLink({
           : undefined
       }
     >
-      <div className='flex w-full flex-wrap items-center justify-center gap-2 p-2'>
+      <div className='xs:hidden xs:flex-wrap w-full items-center gap-2 p-2 sm:hidden sm:flex-wrap md:flex  md:justify-between lg:flex lg:justify-center'>
         <span>{icon}</span>
         <span>
           <p
@@ -116,23 +117,25 @@ export default function Header() {
   };
 
   return (
-    <header className='border-primary-orange border-t-8 bg-white'>
+    <header className='border-primary-orange border-t-8 bg-white '>
       <SocialMediaHeader />
-      <div className='layout flex flex-wrap items-center justify-between'>
+      <div className='layout justify-bwetween flex flex-wrap items-center  '>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
           <div className='bg-primary-orange flex w-64 flex-col items-center justify-center p-4'>
             <p className='text-xs text-gray-800'>AGÊNCIA DE NOTÍCIAS</p>
             <p className='text-xs text-gray-800'>DA PREFEITURA DE FORTALEZA</p>
           </div>
         </UnstyledLink>
-        <nav className='xs:hidden flex items-center sm:hidden md:block lg:block'>
-          <div className='mx-auto flex w-full items-center justify-end'>
-            {headerLinks.map((link) => (
-              <HeaderLink key={link.label} {...link} />
-            ))}
-          </div>
+        <nav className='flex items-center '>
+          {windowSize >= 768 && (
+            <div className='xs:hidden mx-auto flex w-full flex-wrap items-center justify-end '>
+              {headerLinks.map((link) => (
+                <HeaderLink key={link.label} {...link} />
+              ))}
+            </div>
+          )}
         </nav>
-        <div className='xs:visible flex gap-4 md:hidden lg:hidden'>
+        <div className='xs:flex gap-4 md:hidden lg:hidden'>
           <button
             onClick={toggleMobileMenu}
             aria-label='Toggle menu'
@@ -141,14 +144,15 @@ export default function Header() {
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
+        {menuOpen && windowSize <= 768 && (
+          <div className='bg-primary-yellow absolute z-50 flex h-64 w-full flex-col items-center justify-center'>
+            {headerLinks.map((link) => (
+              <HeaderLink key={link.label} {...link} />
+            ))}
+          </div>
+        )}
       </div>
-      {menuOpen && windowSize <= 768 && (
-        <div className='bg-primary-yellow absolute z-50 flex h-64 w-full flex-col items-center justify-center'>
-          {headerLinks.map((link) => (
-            <HeaderLink key={link.label} {...link} />
-          ))}
-        </div>
-      )}
+      <div></div>
     </header>
   );
 }

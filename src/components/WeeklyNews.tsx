@@ -23,9 +23,12 @@ function WeeklyNews({ itemCount }: { itemCount: number | undefined }) {
           </div>
         </>
       )}{' '}
-      <div className=' py-4'>
-        <div className='xs:flex-col flex  items-center  justify-between gap-8  px-4 sm:flex-wrap md:flex-nowrap'>
-          <div className='w-2/4'>
+      <div className='w-full py-4'>
+        <div
+          className='xs:flex-col xs:flex-wrap p x-4 items-center justify-between
+         gap-8 sm:flex-wrap md:flex lg:flex-nowrap'
+        >
+          <div className='xs:w-full lg:w-2/4'>
             {newsList.slice(0, itemCount || 0).map((noticia, id) => (
               <div key={id} className='mb-5'>
                 <NewsCard
@@ -42,30 +45,32 @@ function WeeklyNews({ itemCount }: { itemCount: number | undefined }) {
               </div>
             ))}
           </div>
-          <div className='xs:hidden z-50 h-64 w-1 border-r-2  border-gray-400 p-1 md:block' />
-          <div className='flex w-2/4 flex-col'>
+          {/*           <div className='xs:hidden z-50 h-64 w-1 border-r-2 border-gray-400  p-1 sm:hidden  md:hidden lg:block' />
+           */}{' '}
+          <div className='xs:w-full xs:justify-center flex flex-col flex-wrap sm:w-full md:w-full lg:w-2/4'>
             {newsList.slice(0, 6).map((noticia, id) => {
               const category = filterCategories.find(
                 (category) => category.id === noticia.categoryId
               );
               return (
-                <div key={id}>
-                  <div className='flex gap-4 border-b border-gray-600 p-3'>
-                    <span>
-                      <p className='text-sm text-gray-400'>{noticia.date}</p>
+                <div key={id} className='xs:flex-wrap'>
+                  <div className='xs:flex-wrap xs:flex-col xs:gap-6 border-b border-gray-600 p-3 sm:flex sm:flex-wrap sm:gap-6 md:flex-wrap md:gap-6 lg:flex-nowrap lg:gap-4'>
+                    <span className='my-2'>
+                      <p className='text-sm font-semibold text-gray-400'>
+                        {noticia.date}
+                      </p>
                     </span>
-                    <span className='flex w-32 items-center justify-center bg-white'>
-                      <p className='text-primary-green mx-2 text-xs font-bold uppercase'>
+                    <span className='xs:w-8 my-2 flex items-center justify-center bg-white sm:w-12 lg:w-32'>
+                      <p className='text-primary-green text-xs font-bold uppercase md:mx-2'>
                         {category?.name}
                       </p>
                     </span>
-                    <span>
-                      <p className='font-bold text-gray-600'>{noticia.title}</p>
+                    <span className='flex flex-wrap'>
+                      <p className='text-lg font-bold text-gray-600'>
+                        {noticia.title}
+                      </p>
                     </span>
                   </div>
-                  {id !== newsList.length - 1 && (
-                    <hr className='flex justify-center bg-gray-700' />
-                  )}
                 </div>
               );
             })}

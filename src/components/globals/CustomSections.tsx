@@ -87,7 +87,7 @@ export const Noticias = ({
     <div
       className={`${
         layout === 'vertical'
-          ? 'flex items-start justify-center gap-10'
+          ? 'xs:flex-col justify-center gap-10 sm:flex-col md:flex lg:flex-row'
           : 'flex flex-wrap items-center justify-between'
       } ${className}`}
     >
