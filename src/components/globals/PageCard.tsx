@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
@@ -19,7 +20,8 @@ function PageCard() {
     >
       <div className='layout w-screen '>
         <div className='flex flex-col'>
-          {router.asPath === 'pasginanoticias' && <PaginaNoticia />}
+          {/*           {router.asPath === 'pasginanoticias' && <PaginaNoticia />}
+           */}{' '}
         </div>
       </div>
     </motion.div>

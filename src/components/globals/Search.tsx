@@ -38,8 +38,8 @@ function SearchBar() {
             x='0px'
             y='0px'
             viewBox='0 0 56.966 56.966'
-            style={{ enableBackground: 'new 0 0 56.966 56.966' }}
-            xmlSpace='preserve'
+            /*             style={{ enableBackground: 'new 0 0 56.966 56.966' }}
+             */ xmlSpace='preserve'
             width='512px'
             height='512px'
           >
@@ -66,7 +66,7 @@ function SearchBar() {
                 | undefined;
             }) => (
               <div key={link.id} className='flex items-center space-x-2'>
-                <label htmlFor={link.id} className='ml-2 text-sm text-gray-700'>
+                {/* <label htmlFor={link.id} className='ml-2 text-sm text-gray-700'>
                   {' '}
                   <input
                     id={link.id}
@@ -76,7 +76,7 @@ function SearchBar() {
                     onChange={() => handleCategoryToggle(link)}
                   />
                   {link.label}
-                </label>
+                </label> */}
               </div>
             )
           )}

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { BsChevronRight } from 'react-icons/bs';
+import { BsChevronRight } from 'react-icons/Bs';
 
 interface BreadcrumbItem {
   label: string;
@@ -23,7 +23,7 @@ const Breadcrumbs: React.FC = () => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`text-xs font-semibold text-primary-darkorange ${
+            className={`text-primary-darkorange text-xs font-semibold ${
               index === items.length - 1 ? 'active' : ''
             }`}
           >
@@ -31,7 +31,7 @@ const Breadcrumbs: React.FC = () => {
               <>
                 <Link
                   href={item.href}
-                  className='font-semibold text-primary-orange'
+                  className='text-primary-orange font-semibold'
                 >
                   {item.label}
                 </Link>
